@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-14_19-42-48",
+            "content": "@@ -1,41 +1,4 @@\n-from abc import ABC, abstractmethod%0A%0A\n clas\n@@ -9,13 +9,8 @@\n imal\n-(ABC)\n :%0A  \n@@ -32,536 +32,5 @@\n self\n-, nome:str):%0A        self.__nome = nome%0A%0A    def setNome(self, nome: str):%0A        self.__nome = nome%0A%0A    def getNome(self) -%3E str:%0A        return self.__nome%0A    %0A    def apresentar_nome(self):%0A        print(f'Eu sou um(a) %7Bself.getNome()%7D!')%0A%0A    @abstractmethod%0A    def fazer_som(self):%0A        pass%0A    @abstractmethod%0A    def mover(self):%0A        pass%0A%0Aclass Leao(Animal):%0A    def __init__(self, nome:str):%0A        super().__init__(nome)%0A%0A    %0A    def fazer_som(self):%0A        print('')%0A    %0A    def mover(self):%0A        pass%0A\n+)\n",
+            "lines": "2"
+        },
+        {
+            "label": "2025-12-14_19-48-50",
+            "content": "@@ -523,195 +523,8 @@\n     \n-def fazer_som(self):%0A        print('uraarr')%0A    %0A    def mover(self):%0A        print('correndo')%0A%0Aclass Elefante(Animal):%0A    def __init__(self, nome:str):%0A        super().__init__(nome)%0A\n %0A   \n@@ -564,19 +564,8 @@\n nt('\n-Fuumm uuuuh\n ')%0A \n@@ -602,342 +602,8 @@\n    p\n-rint('correndo pesado')%0A%0Aclass Cobra(Animal):%0A    def __init__(self, nome:str):%0A        super().__init__(nome)%0A%0A    def fazer_som(self):%0A        print('siiiiuuu')%0A    %0A    def mover(self):%0A        print('rastejando')%0A%0Adef apresentar(animal: Animal):%0A    animal.apresentar_nome()%0A    animal.fazer_som()%0A    animal.mover()%0A    print(type())\n+ass%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2025-12-14_19-52-53",
+            "content": "@@ -1136,153 +1136,6 @@\n ype(\n-animal))%0A%0Aanimais = %5B%0A    Leao('mufasa'),%0A    Elefante('dumbo'),%0A    Cobra('Gary, a cobra'),%0A    Leao('Simba')%0A%5D%0A%0Afor i in animais:%0A    apresentar(i\n+)\n )\n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-12-14_19-55-26",
+            "content": "from abc import ABC, abstractmethod\n\nclass Animal(ABC):\n    def __init__(self, nome:str):\n        self.__nome = nome\n\n    def setNome(self, nome: str):\n        self.__nome = nome\n\n    def getNome(self) -> str:\n        return self.__nome\n    \n    def apresentar_nome(self):\n        print(f'Eu sou um(a) {self.getNome()}!')\n\n    @abstractmethod\n    def fazer_som(self):\n        pass\n    @abstractmethod\n    def mover(self):\n        pass\n\nclass Leao(Animal):\n    def __init__(self, nome:str):\n        super().__init__(nome)\n\n    def fazer_som(self):\n        print('uraarr')\n    \n    def mover(self):\n        print('correndo')\n\nclass Elefante(Animal):\n    def __init__(self, nome:str):\n        super().__init__(nome)\n\n    def fazer_som(self):\n        print('Fuumm uuuuh')\n    \n    def mover(self):\n        print('correndo pesado')\n\nclass Cobra(Animal):\n    def __init__(self, nome:str):\n        super().__init__(nome)\n\n    def fazer_som(self):\n        print('siiiiuuu')\n    \n    def mover(self):\n        print('rastejando')\n\ndef apresentar(animal: Animal):\n    animal.apresentar_nome()\n    animal.fazer_som()\n    animal.mover()\n    print(type(animal))\n\nanimais = [\n    Leao('mufasa'),\n    Elefante('dumbo'),\n    Cobra('Gary, a cobra'),\n    Leao('Simba')\n]\n\nfor i in animais:\n    apresentar(i)",
+            "lines": "67"
+        }
+    ]
+}
